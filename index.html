@@ -26,7 +26,22 @@
             document.getElementById("body").appendChild(image);
         </script>
         <script>
-            var audio = new Audio("audio/Krankenwagen.mp3");
+            const number2 = randomIntFromInterval(1, 2);
+
+            switch (number2) {
+                case 1:
+                    {
+                        var audio = new Audio("audio/Krankenwagen.mp3");
+                    }
+                    break;
+                case 2:
+                    {
+                        var audio = new Audio(
+                            "audio/102 BOYZ - Hau ihn um (OFFICIAL VIDEO).mp3"
+                        );
+                    }
+                    break;
+            }
 
             function play() {
                 audio.play();
