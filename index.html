@@ -1,1 +1,36 @@
-x
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Wir ficken Dennis" />
+        <title>Wir Ficken Dennis</title>
+    </head>
+    <body id="body">
+        <script>
+            function randomIntFromInterval(min, max) {
+                // min and max included
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+        </script>
+        <script>
+            const number = randomIntFromInterval(1, 10);
+            const image = document.createElement("img");
+
+            image.setAttribute("src", `images/${number}.png`);
+
+            image.setAttribute("alt", "Wir ficken Dennis");
+            image.setAttribute("onclick", "play();");
+
+            document.getElementById("body").appendChild(image);
+        </script>
+        <script>
+            var audio = new Audio("audio/Krankenwagen.mp3");
+
+            function play() {
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
